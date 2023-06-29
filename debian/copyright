@@ -1,13 +1,13 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: android-system-gsi-30-bin
-Source: https://github.com/droidian/android-system-gsi-30-bin
+Upstream-Name: android-system-gsi-32-bin
+Source: https://github.com/droidian/android-system-gsi-32-bin
 
 Files: *
-Copyright: 2021 Eugenio "g7" Paolantonio <me@medesimo.eu>
+Copyright: 2023 Bardia Moshiri <fakeshell@bardia.tech>
 License: BSD-3-clause
 
 Files: debian/*
-Copyright: 2021 Eugenio "g7" Paolantonio <me@medesimo.eu>
+Copyright: 2023 Bardia Moshiri <fakeshell@bardia.tech>
 License: BSD-3-clause
 
 Files: android-rootfs.img
