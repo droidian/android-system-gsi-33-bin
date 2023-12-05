@@ -1,7 +1,7 @@
-android-system-gsi-32-bin
+android-system-gsi-33-bin
 =========================
 
-This package ships a pre-built Android 12 GSI (Generic System Image)
+This package ships a pre-built Android 13 GSI (Generic System Image)
 so that the Halium initramfs can pick it up during boot.
 
 Why does it matter?
