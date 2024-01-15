@@ -20,13 +20,3 @@ Can the system image be overridden?
 
 Yes, if you put your `android-rootfs.img` image in /userdata as you
 usually would with halium9, you're good to go.
-
-Is this image a prebuilt?
--------------------------
-
-Yes, it is, hence the `-bin` part. Eventually we'll build our own GSI
-image as well (preferably in a Debian buildd environment).
-
-This image is downloaded by the [UBPorts CI Server](https://ci.ubports.com/job/UBportsCommunityPortsJenkinsCI/job/ubports%252Fcommunity-ports%252Fjenkins-ci%252Fgeneric_arm64/job/main/),
-so huge thanks to them for having built that for us to enjoy (and for being
-generally awesome!)

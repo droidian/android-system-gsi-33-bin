@@ -34,7 +34,14 @@ if [[ "${DOWNLOAD_URL}" == *.tar.xz ]]; then
 	find ${PWD}/downloaded_artifacts -iname \*.img -exec mv \{} ${PWD}/downloaded_artifacts/android-rootfs.img \; -quit
 elif [[ "${DOWNLOAD_URL}" == *.img ]]; then
 	info "Selected download url is an .img file"
-	curl -L "${DOWNLOAD_URL}" > "${PWD}/downloaded_artifacts/android-rootfs.img"
+	curl -L "${DOWNLOAD_URL}" > "${PWD}/downloaded_artifacts/android-rootfs-tmp.img"
+
+	if file "${PWD}/downloaded_artifacts/android-rootfs-tmp.img" | grep -q "Android sparse image"; then
+		simg2img "${PWD}/downloaded_artifacts/android-rootfs-tmp.img" "${PWD}/downloaded_artifacts/android-rootfs.img"
+		rm -f "${PWD}/downloaded_artifacts/android-rootfs-tmp.img"
+	else
+		mv "${PWD}/downloaded_artifacts/android-rootfs-tmp.img" "${PWD}/downloaded_artifacts/android-rootfs.img"
+	fi
 fi
 
 if [ -n "${SIGNATURE_DOWNLOAD_URL}" ]; then
