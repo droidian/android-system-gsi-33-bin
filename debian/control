@@ -1,8 +1,9 @@
 Source: android-system-gsi-33-bin
-Maintainer: Bardia Moshiri <fakeshell@bardia.tech>
+Maintainer: Eugenio Paolantonio (g7) <eugenio@droidian.org>
 Section: misc
 Priority: optional
 Build-Depends: debhelper (>= 13),
+               debhelper-compat (= 13),
                curl,
                tar,
                xz-utils,
